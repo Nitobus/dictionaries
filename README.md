@@ -6,9 +6,9 @@ sources, listed below with their authors and licenses.
 
 | File | Words | Translated into | Size |
 |---|---|---|---|
-| [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,153 words (32,675 translated), 879,304 forms | Russian | 44 MB |
-| [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 108,380 words, 1,146,468 forms | English | 46 MB |
-| [`english-spanish.sqlite`](english-spanish.sqlite) | English, 62,452 words, 101,567 forms | Spanish | 13 MB |
+| [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,216 words (32,957 translated), 879,430 forms | Russian | 44 MB |
+| [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 109,114 words, 1,147,032 forms | English | 46 MB |
+| [`english-spanish.sqlite`](english-spanish.sqlite) | English, 62,473 words, 101,596 forms | Spanish | 13 MB |
 | [`finnish-russian.sqlite`](finnish-russian.sqlite) | Finnish, 44,191 words (22,447 translated), 1,268,221 forms | Russian | 38 MB |
 
 ## License
@@ -84,7 +84,11 @@ reorganized as follows; no translations were written by hand or by machine trans
 - Every SALDO word with all its inflected forms; participles, genitives and subjunctives are
   marked as weaker readings of a form.
 - Lexin's entries are matched to SALDO words by spelling and word class (Lexin's ordinal
-  numerals to SALDO's adjectives: *andra*, второй); Lexin's translation comes first. Words Lexin lacks get WikDict's translations, ranked by WikDict's importance score.
+  numerals to SALDO's adjectives: *andra*, второй); Lexin's translation comes first. A word
+  Lexin, Kelly or WikDict files under another class than SALDO's takes it when SALDO knows the
+  word in one class only and it is no verb (*anhörig*, *samtlig*); a one-word spelling takes
+  Lexin's two-word one (*ikväll*: i kväll). Lexin's notes ("в идиомах", "см. …") are not used
+  as translations. Places Lexin translates are kept (*Sverige*, Швеция). Words Lexin lacks get WikDict's translations, ranked by WikDict's importance score.
 - Lexin's expressions and idioms are kept as entries of their own, keyed by their first word;
   reflexive pronouns are stored as *sig* (*känner mig* finds *känna sig*).
 - Lexin's example sentences with their Russian translations (up to three) are attached to their words.
@@ -101,7 +105,9 @@ reorganized as follows; no translations were written by hand or by machine trans
   nonstandard, rare or colloquial for Latin America or Spain as a whole (*regresar*), never
   slang or one country's usage, and never when the word is a form of another or a name.
 - A form with a meaning of its own beside its word's gets an entry: *hay* (there is, there
-  are), *los hijos* (sons, children). Where a form belongs to
+  are), *los hijos* (sons, children).
+- Places whose English name is written otherwise are kept (*España*, Spain; *Londres*, London),
+  not given names (*Sofía*). Where a form belongs to
   several words (*vino*: wine, or "came"), the reading Tatoeba's translations point to is preferred.
 - Reflexive verbs and expressions with a reflexive pronoun (*darse cuenta*) are listed with every
   pronoun they take (`reflexives`); multiword expressions are keyed by their first word, and
@@ -118,6 +124,8 @@ reorganized as follows; no translations were written by hand or by machine trans
 - Spanish translations from Spanish Wiktionary's meanings, kept when English Wiktionary's
   translation table for the word's main sense confirms them; otherwise the table's own Spanish
   words, the rare ones dropped by how often Tatoeba's Spanish uses them.
+- Lowercase nouns that in running text are nearly always a person's name are left out
+  (*tom*: Tom).
 - Phrasal verbs get up to three meanings, in the order of how often the Spanish translations of
   Tatoeba's sentences show them (*give up*: rendirse; abandonar).
 - Constructions followed by an infinitive (*be going to*, *have to*) are marked `+inf`.
