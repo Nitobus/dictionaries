@@ -1,0 +1,8 @@
+The dictionaries in this repository (swedish-russian.sqlite, spanish-english.sqlite,
+english-spanish.sqlite) are licensed under the Creative Commons Attribution-ShareAlike 4.0
+International License (CC BY-SA 4.0).
+
+Full legal text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+They are adaptations of works by others; their authors, licenses and the changes made are
+listed in README.md and in each file's `meta` table (key `sources`).
