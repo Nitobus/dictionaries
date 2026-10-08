@@ -9,6 +9,7 @@ sources, listed below with their authors and licenses.
 | [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,153 words (32,655 translated), 879,304 forms | Russian | 44 MB |
 | [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 107,437 words, 1,132,542 forms | English | 45 MB |
 | [`english-spanish.sqlite`](english-spanish.sqlite) | English, 62,452 words, 101,567 forms | Spanish | 13 MB |
+| [`finnish-russian.sqlite`](finnish-russian.sqlite) | Finnish, 43,884 words (21,817 translated), 1,264,823 forms | Russian | 38 MB |
 
 ## License
 
@@ -54,6 +55,20 @@ lists for language learners for nine languages*, Language Resources and Evaluati
 | [English Wiktionary](https://en.wiktionary.org), extracted by [kaikki.org](https://kaikki.org/dictionary/English/) | Wiktionary contributors; extraction by wiktextract (Tatu Ylönen) | English words, forms, phrasal verbs, translation tables | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | [Spanish Wiktionary](https://es.wiktionary.org), extracted by [kaikki.org](https://kaikki.org/eswiktionary/) | Wikcionario contributors; extraction by wiktextract (Tatu Ylönen) | Spanish translations | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | [Tatoeba](https://tatoeba.org) | Tatoeba contributors, named with each example | example sentences with translations; word frequencies | [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/) |
+
+### `finnish-russian.sqlite`
+
+| Source | Authors | Used for | License |
+|---|---|---|---|
+| [English Wiktionary](https://en.wiktionary.org), extracted by [kaikki.org](https://kaikki.org/dictionary/Finnish/) | Wiktionary contributors; extraction by wiktextract (Tatu Ylönen) | Finnish words, declension and conjugation tables, expressions | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| [Russian Wiktionary](https://ru.wiktionary.org), extracted by [kaikki.org](https://kaikki.org/ruwiktionary/) | Викисловарь contributors; extraction by wiktextract (Tatu Ylönen) | Russian translations | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| [WikDict](https://www.wikdict.com) | Karl Bartel; Wiktionary contributors via [DBnary](http://kaiko.getalp.org/about-dbnary/) (Gilles Sérasset) | Russian translations of words Russian Wiktionary lacks | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| [Nykysuomen sanalista](https://kotus.fi/sanakirjat/kielitoimiston-sanakirja/nykysuomen-sana-aineistot/nykysuomen-sanalista/) | Kotimaisten kielten keskus (Institute for the Languages of Finland) | which untranslated words are standard Finnish | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| [Psycholinguistic Descriptives](http://urn.fi/urn:nbn:fi:lb-2018081601) | Tatu Huovilainen; University of Helsinki, the Language Bank of Finland | word frequencies | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| [Tatoeba](https://tatoeba.org) | Tatoeba contributors, named with each example | example sentences with translations | [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/) |
+
+Kotus asks to cite the word list as: Nykysuomen sanalista. Kotimaisten kielten keskus.
+https://kaino.kotus.fi/lataa/nykysuomensanalista2024.txt
 
 Wiktionary text is dual-licensed under CC BY-SA 4.0 and GFDL; it is used here under CC BY-SA 4.0.
 Tatoeba sentences are CC BY 2.0 FR or CC0; sentences with unresolved licensing are not part of
@@ -105,9 +120,28 @@ reorganized as follows; no translations were written by hand or by machine trans
   per meaning first.
 - An importance score from how often Tatoeba's sentences use the word and its forms.
 
+**Finnish–Russian**
+
+- Finnish lemmas with every form of their declension or conjugation tables; a negative verb
+  form gives its main verb (*en tiedä* → *tiedä*). Possessive forms (*talossani*) are not
+  listed: cut the suffix off and look up the rest. Only the possessive stem that differs from
+  every listed form is kept, as a weak form (*käsi*: *käte-ni* → `käte`).
+- Russian translations from Russian Wiktionary's meanings, up to three words: two from the first
+  sense, then the first word of the following senses (*väärä*: кривой, согнутый; неверный).
+  Labels, Latin names, stress marks and glosses that describe a form of another word are
+  removed. Words Russian Wiktionary lacks take WikDict's checked translations; its unchecked
+  ones are not used.
+- Every translated word is kept; untranslated ones only when they are on the Kotus list and
+  common (at least 1,000 uses in Psycholinguistic Descriptives' corpora), one entry per word.
+- Forms that start compounds (the nominative and the genitive singular) are listed in `parts`.
+- Up to two Tatoeba sentence pairs per word, chosen so their Russian shows the translation; a
+  word spelled like a commoner one (*voi*, butter, beside *voi*, can) takes only sentences that
+  show it.
+- An importance score from Psycholinguistic Descriptives' lemma frequencies.
+
 ## Format
 
-All three files share one schema (`reflexives` only in Spanish).
+All files share one schema (`reflexives` only in Spanish).
 
 | Table | Columns | What it holds |
 |---|---|---|
