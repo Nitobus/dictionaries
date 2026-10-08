@@ -6,7 +6,7 @@ sources, listed below with their authors and licenses.
 
 | File | Words | Translated into | Size |
 |---|---|---|---|
-| [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,153 words (32,655 translated), 879,304 forms | Russian | 44 MB |
+| [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,153 words (32,675 translated), 879,304 forms | Russian | 44 MB |
 | [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 108,380 words, 1,146,468 forms | English | 46 MB |
 | [`english-spanish.sqlite`](english-spanish.sqlite) | English, 62,452 words, 101,567 forms | Spanish | 13 MB |
 | [`finnish-russian.sqlite`](finnish-russian.sqlite) | Finnish, 44,191 words (22,447 translated), 1,268,221 forms | Russian | 38 MB |
@@ -83,8 +83,8 @@ reorganized as follows; no translations were written by hand or by machine trans
 
 - Every SALDO word with all its inflected forms; participles, genitives and subjunctives are
   marked as weaker readings of a form.
-- Lexin's entries are matched to SALDO words by spelling and word class; Lexin's translation
-  comes first. Words Lexin lacks get WikDict's translations, ranked by WikDict's importance score.
+- Lexin's entries are matched to SALDO words by spelling and word class (Lexin's ordinal
+  numerals to SALDO's adjectives: *andra*, второй); Lexin's translation comes first. Words Lexin lacks get WikDict's translations, ranked by WikDict's importance score.
 - Lexin's expressions and idioms are kept as entries of their own, keyed by their first word;
   reflexive pronouns are stored as *sig* (*känner mig* finds *känna sig*).
 - Lexin's example sentences with their Russian translations (up to three) are attached to their words.
