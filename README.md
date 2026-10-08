@@ -7,7 +7,7 @@ sources, listed below with their authors and licenses.
 | File | Words | Translated into | Size |
 |---|---|---|---|
 | [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,153 words (32,655 translated), 879,304 forms | Russian | 44 MB |
-| [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 107,437 words, 1,132,542 forms | English | 45 MB |
+| [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 108,380 words, 1,146,468 forms | English | 46 MB |
 | [`english-spanish.sqlite`](english-spanish.sqlite) | English, 62,452 words, 101,567 forms | Spanish | 13 MB |
 | [`finnish-russian.sqlite`](finnish-russian.sqlite) | Finnish, 44,191 words (22,447 translated), 1,268,221 forms | Russian | 38 MB |
 
@@ -96,7 +96,12 @@ reorganized as follows; no translations were written by hand or by machine trans
 - Spanish lemmas with their inflected forms, including verb forms with attached pronouns
   (*dámelo*, *siéntate*); archaic, rare and misspelled forms are left out or marked weak.
 - English translations are taken from Wiktionary's sense glosses, shortened to the gloss's
-  translation part; slang, vulgar, obsolete and dated senses are skipped. Where a form belongs to
+  translation part (not a clarifying note such as "As a temporary state"); slang, vulgar,
+  obsolete and dated senses are skipped. A word with no other sense may take a sense marked
+  nonstandard, rare or colloquial for Latin America or Spain as a whole (*regresar*), never
+  slang or one country's usage, and never when the word is a form of another or a name.
+- A form with a meaning of its own beside its word's gets an entry: *hay* (there is, there
+  are), *los hijos* (sons, children). Where a form belongs to
   several words (*vino*: wine, or "came"), the reading Tatoeba's translations point to is preferred.
 - Reflexive verbs and expressions with a reflexive pronoun (*darse cuenta*) are listed with every
   pronoun they take (`reflexives`); multiword expressions are keyed by their first word, and
