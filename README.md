@@ -9,7 +9,7 @@ sources, listed below with their authors and licenses.
 | [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,153 words (32,655 translated), 879,304 forms | Russian | 44 MB |
 | [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 107,437 words, 1,132,542 forms | English | 45 MB |
 | [`english-spanish.sqlite`](english-spanish.sqlite) | English, 62,452 words, 101,567 forms | Spanish | 13 MB |
-| [`finnish-russian.sqlite`](finnish-russian.sqlite) | Finnish, 43,884 words (21,817 translated), 1,264,823 forms | Russian | 38 MB |
+| [`finnish-russian.sqlite`](finnish-russian.sqlite) | Finnish, 44,191 words (22,447 translated), 1,268,221 forms | Russian | 38 MB |
 
 ## License
 
@@ -129,8 +129,18 @@ reorganized as follows; no translations were written by hand or by machine trans
 - Russian translations from Russian Wiktionary's meanings, up to three words: two from the first
   sense, then the first word of the following senses (*väärä*: кривой, согнутый; неверный).
   Labels, Latin names, stress marks and glosses that describe a form of another word are
-  removed. Words Russian Wiktionary lacks take WikDict's checked translations; its unchecked
-  ones are not used.
+  removed. Words Russian Wiktionary lacks take WikDict's checked translations, without the few
+  obscene ones; its unchecked ones are not used. A source that files a word under a part of
+  speech the word has nowhere else is used too (*moni*: a pronoun in one Wiktionary, an
+  adjective in the other).
+- Spoken Finnish as textbooks print it: forms English Wiktionary marks as alternative or
+  colloquial lead to the standard word (*ku* → *kun*, *sit* → *sitten*), the spoken pronouns'
+  forms to the standard pronouns (*sä*, *sun*, *sulla* → *sinä*), and a few spoken forms no
+  source lists are added (*oo* → *olla*, *meiän* → *me*). These are weaker readings (`weak` 1–2).
+- Forms of a form follow the chain (*niistä* → *ne* → *se*); a form that is also a word of its
+  own about as common, or a rare case (instructive, comitative), is a weaker reading (*yli*,
+  *hyvin*, *noin* are words first).
+- Names only with a translation (*Suomi* → Финляндия).
 - Every translated word is kept; untranslated ones only when they are on the Kotus list and
   common (at least 1,000 uses in Psycholinguistic Descriptives' corpora), one entry per word.
 - Forms that start compounds (the nominative and the genitive singular) are listed in `parts`.
