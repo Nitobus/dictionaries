@@ -107,11 +107,12 @@ reorganized as follows; no translations were written by hand or by machine trans
 - A form with a meaning of its own beside its word's gets an entry: *hay* (there is, there
   are), *los hijos* (sons, children), *les* (to them), *peor* (worse).
 - Places whose English name is written otherwise are kept (*España*, Spain; *Londres*, London),
-  and so are names of several words translated otherwise (*Semana Santa*, Holy Week). Places of
-  several words written the same in English are listed in `names` (*Costa Rica*, *La Paz*).
-  *ir a* counts as a construction before an infinitive only in the present, imperfect and
+  not given names (*Sofía*), and so are names of several words translated otherwise (*Semana
+  Santa*, Holy Week). Places of several words written the same in English are listed in `names`
+  (*Costa Rica*, *La Paz*).
+- *ir a* counts as a construction before an infinitive only in the present, imperfect and
   subjunctive.
-  not given names (*Sofía*). Where a form belongs to
+- Where a form belongs to
   several words (*vino*: wine, or "came"), the reading Tatoeba's translations point to is preferred.
 - Where Tatoeba's translations of a word's sentences clearly point to a later sense than
   Wiktionary's first, that sense is used (*carne*: meat). Function words don't count as evidence,
