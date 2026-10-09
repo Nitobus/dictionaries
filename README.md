@@ -7,7 +7,7 @@ sources, listed below with their authors and licenses.
 | File | Words | Translated into | Size |
 |---|---|---|---|
 | [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,216 words (32,957 translated), 879,430 forms | Russian | 44 MB |
-| [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 109,114 words, 1,147,032 forms | English | 46 MB |
+| [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 109,121 words, 1,146,837 forms | English | 46 MB |
 | [`english-spanish.sqlite`](english-spanish.sqlite) | English, 62,473 words, 101,596 forms | Spanish | 13 MB |
 | [`finnish-russian.sqlite`](finnish-russian.sqlite) | Finnish, 44,191 words (22,447 translated), 1,268,221 forms | Russian | 38 MB |
 
@@ -105,10 +105,15 @@ reorganized as follows; no translations were written by hand or by machine trans
   nonstandard, rare or colloquial for Latin America or Spain as a whole (*regresar*), never
   slang or one country's usage, and never when the word is a form of another or a name.
 - A form with a meaning of its own beside its word's gets an entry: *hay* (there is, there
-  are), *los hijos* (sons, children).
+  are), *los hijos* (sons, children), *les* (to them), *peor* (worse).
 - Places whose English name is written otherwise are kept (*España*, Spain; *Londres*, London),
   not given names (*Sofía*). Where a form belongs to
   several words (*vino*: wine, or "came"), the reading Tatoeba's translations point to is preferred.
+- Where Tatoeba's translations of a word's sentences clearly point to a later sense than
+  Wiktionary's first, that sense is used (*carne*: meat). Function words don't count as evidence,
+  common words only beyond chance, phrasal verbs as a pair (*put on*). A verb's reflexive senses
+  belong to the reflexive verb (*acordar*: agree; *acordarse*: remember), which picks its sense
+  from sentences with the pronoun written apart (*se puso*: put on) and takes no slang sense.
 - Reflexive verbs and expressions with a reflexive pronoun (*darse cuenta*) are listed with every
   pronoun they take (`reflexives`); multiword expressions are keyed by their first word, and
   constructions followed by an infinitive (*ir a* + infinitive) are marked `+inf`.
