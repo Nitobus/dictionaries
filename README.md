@@ -7,7 +7,7 @@ sources, listed below with their authors and licenses.
 | File | Words | Translated into | Size |
 |---|---|---|---|
 | [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,216 words (32,957 translated), 879,430 forms | Russian | 44 MB |
-| [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 109,121 words, 1,146,837 forms | English | 46 MB |
+| [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 109,433 words, 1,146,837 forms | English | 46 MB |
 | [`english-spanish.sqlite`](english-spanish.sqlite) | English, 62,473 words, 101,596 forms | Spanish | 13 MB |
 | [`finnish-russian.sqlite`](finnish-russian.sqlite) | Finnish, 44,191 words (22,447 translated), 1,268,221 forms | Russian | 38 MB |
 
@@ -107,6 +107,10 @@ reorganized as follows; no translations were written by hand or by machine trans
 - A form with a meaning of its own beside its word's gets an entry: *hay* (there is, there
   are), *los hijos* (sons, children), *les* (to them), *peor* (worse).
 - Places whose English name is written otherwise are kept (*España*, Spain; *Londres*, London),
+  and so are names of several words translated otherwise (*Semana Santa*, Holy Week). Places of
+  several words written the same in English are listed in `names` (*Costa Rica*, *La Paz*).
+  *ir a* counts as a construction before an infinitive only in the present, imperfect and
+  subjunctive.
   not given names (*Sofía*). Where a form belongs to
   several words (*vino*: wine, or "came"), the reading Tatoeba's translations point to is preferred.
 - Where Tatoeba's translations of a word's sentences clearly point to a later sense than
@@ -169,7 +173,7 @@ reorganized as follows; no translations were written by hand or by machine trans
 
 ## Format
 
-All files share one schema (`reflexives` only in Spanish).
+All files share one schema (`reflexives` and `names` only in Spanish).
 
 | Table | Columns | What it holds |
 |---|---|---|
@@ -178,6 +182,7 @@ All files share one schema (`reflexives` only in Spanish).
 | `parts` | `form`, `entry_id` | Forms a word takes as the first part of a compound (Swedish). |
 | `phrases` | `head`, `rest`, `entry_id` | Multiword expressions by their first word, in any of its forms: `gave` + `up` → *give up*. A trailing `+inf` means the expression only counts before an infinitive. |
 | `reflexives` | `form`, `pronoun`, `entry_id` | Spanish: a verb form and the reflexive pronoun before it → the reflexive verb (`levanto` + `me` → *levantarse*). |
+| `names` | `head`, `name` | Spanish: places of several words, as written, keyed by their lowercased first word (`costa` → *Costa Rica*). |
 | `meta` | `key`, `value` | `translation_languages`, `language` (ISO 639-1) and `sources` (JSON: name, authors, license, links). |
 
 ### Examples
