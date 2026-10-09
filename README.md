@@ -89,8 +89,8 @@ reorganized as follows; no translations were written by hand or by machine trans
   word in one class only and it is no verb (*anhörig*, *samtlig*); a one-word spelling takes
   Lexin's two-word one (*ikväll*: i kväll). Lexin's notes ("в идиомах", "см. …") are not used
   as translations. WikDict's Wiktionary links are resolved to their shown text
-  ("[[трубка|трубку]]" → трубку). The spelling *andra* is read as the ordinal (второй) first,
-  not the rare verb. Places Lexin translates are kept (*Sverige*, Швеция). Words Lexin lacks get WikDict's translations, ranked by WikDict's importance score.
+  ("[[трубка|трубку]]" → трубку). Where Lexin lists two words under one spelling and translates
+  both (*andra*: второй, and другие as annan's plural), the entry gives both meanings. Places Lexin translates are kept (*Sverige*, Швеция). Words Lexin lacks get WikDict's translations, ranked by WikDict's importance score.
 - Lexin's expressions and idioms are kept as entries of their own, keyed by their first word;
   reflexive pronouns are stored as *sig* (*känner mig* finds *känna sig*).
 - Lexin's example sentences with their Russian translations (up to three) are attached to their words.
