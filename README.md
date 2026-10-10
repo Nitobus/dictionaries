@@ -34,6 +34,7 @@ The files come as they are, without warranty of any kind.
 | [Lexin Swedish–Russian](https://sprakresurser.isof.se/lexin/ryska/) | Institute for Language and Folklore (Isof) – Language Council of Sweden; Valery Alexandrov | translations, expressions, example sentences | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 | [WikDict](https://www.wikdict.com) | Karl Bartel; Wiktionary contributors via [DBnary](http://kaiko.getalp.org/about-dbnary/) (Gilles Sérasset) | translations of words Lexin lacks | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | [Swedish Kelly list](https://doi.org/10.23695/6act-rs25) | Elena Volodina, Sofie Johansson Kokkinakis; Språkbanken Text | CEFR levels A1–C2 of 7,865 words | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)* |
+| [Tatoeba](https://tatoeba.org) | Tatoeba contributors | which of several words a spelling usually is (Swedish sentences with Russian translations; no sentence is included) | [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/) |
 
 \* The Kelly page names two licenses (CC BY-SA 3.0 and LGPL 3.0 in its description, CC BY 4.0
 in its download table); the stricter CC BY-SA 3.0 is given here. Kelly's authors ask to cite
@@ -95,6 +96,10 @@ reorganized as follows; no translations were written by hand or by machine trans
   reflexive pronouns are stored as *sig* (*känner mig* finds *känna sig*).
 - Lexin's example sentences with their Russian translations (up to three) are attached to their words.
 - Kelly levels are attached to the matching words.
+- Where a spelling belongs to several words (*bad*: a bath, or *be*'s past "asked"), the word
+  the Russian translations of Tatoeba's Swedish sentences with it point to is read first, when
+  clearly so; a Kelly word never gives way to one off the list. A noun's second spelling of a
+  form that is another word (*bit* beside *biet* for *bi*) is marked weak.
 - Forms that start compounds are listed for splitting compounds (`parts`).
 
 **Spanish–English**
