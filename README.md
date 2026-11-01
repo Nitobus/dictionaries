@@ -6,7 +6,7 @@ sources, listed below with their authors and licenses.
 
 | File | Words | Translated into | Size |
 |---|---|---|---|
-| [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,216 words (32,957 translated), 879,430 forms | Russian | 44 MB |
+| [`swedish-russian.sqlite`](swedish-russian.sqlite) | Swedish, 119,192 words (32,998 translated), 878,904 forms | Russian | 44 MB |
 | [`spanish-english.sqlite`](spanish-english.sqlite) | Spanish, 109,433 words, 1,146,837 forms | English | 46 MB |
 | [`english-spanish.sqlite`](english-spanish.sqlite) | English, 62,473 words, 101,596 forms | Spanish | 13 MB |
 | [`finnish-russian.sqlite`](finnish-russian.sqlite) | Finnish, 44,191 words (22,447 translated), 1,268,221 forms | Russian | 38 MB |
@@ -78,7 +78,9 @@ Tatoeba's exports and so not used here.
 ## Changes made
 
 The sources were not copied as they are. For each dictionary they were matched, filtered and
-reorganized as follows; no translations were written by hand or by machine translation.
+reorganized as follows. No machine translation was used. Four Swedish function words and two
+Spanish contractions, which the sources only point to, have translations written by hand (listed
+below).
 
 **Swedish–Russian**
 
@@ -92,6 +94,19 @@ reorganized as follows; no translations were written by hand or by machine trans
   as translations. WikDict's Wiktionary links are resolved to their shown text
   ("[[трубка|трубку]]" → трубку). Where Lexin lists two words under one spelling and translates
   both (*andra*: второй, and другие as annan's plural), the entry gives both meanings. Places Lexin translates are kept (*Sverige*, Швеция). Words Lexin lacks get WikDict's translations, ranked by WikDict's importance score.
+- Each Lexin translation is one sense; a word gives up to three, separated by `; ` (*bok*:
+  книга; бук; книжка). Lexin's order is kept, except that the sense the Russian translations of
+  Tatoeba's sentences with the word clearly use most comes first (content words only). Words
+  repeated in a later sense are dropped; a grammar note ("вспомогательный глагол") comes after
+  the translations, and where it is all Lexin gives, WikDict's translation comes first.
+- Words Lexin explains in Swedish but doesn't translate keep that explanation in `definition`
+  (a verb may take its participle's, prefixed by the participle: "sjukskriven — sjukanmäld (av
+  läkare)"). Where no source translates such a word, `translation` gives a word of the same
+  family that Lexin translates, marked "ср." ("ср. en sjukskrivning — заявление о временной
+  нетрудоспособности").
+- SALDO's letter names (*ett a*, *ett ö*) are left out.
+- Written by hand, because the sources lack them as words: *en* (один; неопределённый артикль),
+  *man* ((безличное) люди, кто-то), *om* (о, об; через (о времени)), *att* (что; частица инфинитива).
 - Lexin's expressions and idioms are kept as entries of their own, keyed by their first word;
   reflexive pronouns are stored as *sig* (*känner mig* finds *känna sig*).
 - Lexin's example sentences with their Russian translations (up to three) are attached to their words.
@@ -126,6 +141,10 @@ reorganized as follows; no translations were written by hand or by machine trans
   common words only beyond chance, phrasal verbs as a pair (*put on*). A verb's reflexive senses
   belong to the reflexive verb (*acordar*: agree; *acordarse*: remember), which picks its sense
   from sentences with the pronoun written apart (*se puso*: put on) and takes no slang sense.
+- Besides the main sense, up to two later senses that the English translations of the word's
+  Tatoeba sentences use beyond chance, counted only in sentences that don't already show the main
+  sense (*tiempo*: time; weather; *banco*: bank; bench); content words only.
+- Written by hand: *al* (to the), *del* (of the), which Wiktionary only describes as contractions.
 - Reflexive verbs and expressions with a reflexive pronoun (*darse cuenta*) are listed with every
   pronoun they take (`reflexives`); multiword expressions are keyed by their first word, and
   constructions followed by an infinitive (*ir a* + infinitive) are marked `+inf`.
@@ -185,7 +204,7 @@ All files share one schema (`reflexives` and `names` only in Spanish).
 
 | Table | Columns | What it holds |
 |---|---|---|
-| `entries` | `id`, `lemma`, `pos`, `display`, `forms`, `translation`, `importance`, `examples`, `level` | One row per word or expression. `display` is the dictionary form as learners see it (*att tala*, *to go*). `forms` is a JSON list of `[label, form]` pairs. `translation` is comma-separated, meanings separated by `; `. `level` is a CEFR level 1 (A1) – 6 (C2), 0 when unknown. |
+| `entries` | `id`, `lemma`, `pos`, `display`, `forms`, `translation`, `importance`, `examples`, `level` | One row per word or expression. `display` is the dictionary form as learners see it (*att tala*, *to go*). `forms` is a JSON list of `[label, form]` pairs. `translation` is comma-separated, meanings separated by `; `. `level` is a CEFR level 1 (A1) – 6 (C2), 0 when unknown. Swedish only: `definition`, Lexin's Swedish explanation of a word it doesn't translate. |
 | `forms` | `form`, `entry_id`, `weak` | Every lowercased inflected form → its word. `weak = 1` marks a rare or secondary reading. |
 | `parts` | `form`, `entry_id` | Forms a word takes as the first part of a compound (Swedish). |
 | `phrases` | `head`, `rest`, `entry_id` | Multiword expressions by their first word, in any of its forms: `gave` + `up` → *give up*. A trailing `+inf` means the expression only counts before an infinitive. |
